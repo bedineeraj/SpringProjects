@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+	<bean id="triangleBean" class="com.neerajb.shapes.Triangle">
+		<property name="sideA" value="10"></property>
+		<property name="sideB" value="5"></property>
+		<property name="sideC" value="20"></property>
+	</bean>
+ 
+</beans>
