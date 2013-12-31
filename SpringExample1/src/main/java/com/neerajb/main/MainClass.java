@@ -5,6 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.neerajb.shapes.Triangle;
 
+
 public class MainClass {
 	
 	public static void main(String[] args) {
@@ -12,7 +13,6 @@ public class MainClass {
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringExample1.xml");
 		Triangle obj = context.getBean("triangleBean", Triangle.class);
-		System.out.println(obj.getSideA());		
+		System.out.println(obj);
 	}
-
 }

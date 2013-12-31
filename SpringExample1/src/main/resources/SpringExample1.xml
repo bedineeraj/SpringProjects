@@ -1,12 +1,27 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
  
 	<bean id="triangleBean" class="com.neerajb.shapes.Triangle">
-		<property name="sideA" value="10"></property>
-		<property name="sideB" value="5"></property>
-		<property name="sideC" value="20"></property>
+		<property name="pointA" ref="pointA"></property>
+		<property name="pointC" ref="pointC"></property>
+		<property name="pointB">
+			<bean class="com.neerajb.shapes.Point">
+				<property name="x" value="10"></property>
+				<property name="y" value="10"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="pointA" class="com.neerajb.shapes.Point" >
+		<property name="x" value="0"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	
+	<bean id="pointC" class="com.neerajb.shapes.Point" >
+		<property name="x" value="20"></property>
+		<property name="y" value="20"></property>
 	</bean>
  
 </beans>
