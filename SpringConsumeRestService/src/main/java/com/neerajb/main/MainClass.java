@@ -19,7 +19,7 @@ public class MainClass {
 		ClassPathXmlApplicationContext context=null;
 		try{
 			Map<String, String> queryParams = new HashMap<String, String>();
-			queryParams.put("issn", "1526-0542");
+			queryParams.put("issn", "0016-5085");
 			
 			context = new ClassPathXmlApplicationContext("spring-config.xml");
 			RestClient restClient = context.getBean("restClient", RestClient.class);
