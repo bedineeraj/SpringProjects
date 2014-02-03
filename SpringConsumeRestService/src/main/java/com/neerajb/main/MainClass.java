@@ -12,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.neerajb.client.RestClient;
+import com.neerajb.contants.WebServiceUrl;
 
 public class MainClass {
 	public static void main(String[] args) {
@@ -23,7 +24,7 @@ public class MainClass {
 			
 			context = new ClassPathXmlApplicationContext("spring-config.xml");
 			RestClient restClient = context.getBean("restClient", RestClient.class);
-			String response = restClient.execute("/ae/ecomm/getSubscriptionPrices", null, queryParams);
+			String response = restClient.execute(WebServiceUrl.GET_SUBSCRIPTION_PRICES, null, queryParams);
 			
 			
 			System.out.println(response);
